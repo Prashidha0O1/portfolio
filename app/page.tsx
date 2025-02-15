@@ -1,13 +1,13 @@
-import { Github, Mail, Linkedin } from "lucide-react"
+import { Github, Mail, Linkedin, ExternalLink } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 
 export default function Page() {
   const skills = {
-    languages: ["TypeScript", "JavaScript", "Python", "Rust", "Zig"],
+    languages: ["JavaScript", "TypeScript", "Python", "C++", "C#", "Rust", "Zig"],
     frameworks: ["React.js", "Next.js", "Tauri", "React Native", "Express.js", "Flask", "Django"],
-    backend: ["Node.js"],
+    backend: ["Node.js", ".NET", "REST APIs", "Microservices"],
     databases: ["PostgreSQL", "MongoDB", "Elasticsearch", "SQL"],
   }
 
@@ -48,8 +48,6 @@ export default function Page() {
             <div>
               <h1 className="text-3xl font-bold">Prashidha Rawal</h1>
               <p className="text-lg text-zinc-400">Full Stack Developer</p>
-              <p className="text-lg text-zinc-400">📍 Kathmandu, Nepal</p>
-
             </div>
             <p className="text-sm text-zinc-400">Building Real Products For Real Clients, Not Just More Projects</p>
           </div>
@@ -85,9 +83,14 @@ export default function Page() {
             <h2 className="text-2xl font-bold mb-4">About Me</h2>
             <div className="space-y-4 text-zinc-300">
               <p>
-              I'm a 19-year-old Full Stack Developer who builds practical solutions from start to finish. 
-              I work with both frontend and backend technologies and have experience in Web3 development on Solana using the Anchor Framework. 
-              I focus on writing smart contracts, integrating blockchain features, and making Web3 applications more accessible.
+                I'm a 22-year-old experienced Full Stack Developer with a knack for building products that make a
+                difference. My expertise spans both frontend and backend technologies, enabling me to craft
+                comprehensive solutions from the ground up.
+              </p>
+              <p>
+                Throughout my career, I've been deeply involved in the startup ecosystem. I've worked with various
+                startups, embracing the fast-paced, innovative nature of these environments. This journey led me to gain
+                firsthand experience in every aspect of product development and business operations.
               </p>
             </div>
           </section>
@@ -179,6 +182,90 @@ export default function Page() {
                         {tech}
                       </Badge>
                     ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-6">Projects</h2>
+            <div className="grid gap-6 md:grid-cols-2">
+              {[
+                {
+                  title: "Project One",
+                  description: "A brief description of your first project goes here. Keep it concise and meaningful.",
+                  technologies: ["Rust", "WebAssembly", "React"],
+                  github: "https://github.com/yourusername/project-one",
+                  live: "https://project-one.com",
+                  image: "/placeholder.svg?height=200&width=400",
+                },
+                {
+                  title: "Project Two",
+                  description:
+                    "Another project description. What problems did you solve? What technologies did you use?",
+                  technologies: ["TypeScript", "Next.js", "PostgreSQL"],
+                  github: "https://github.com/yourusername/project-two",
+                  live: "https://project-two.com",
+                  image: "/placeholder.svg?height=200&width=400",
+                },
+                {
+                  title: "Project Three",
+                  description: "Yet another amazing project you worked on. What makes this one special?",
+                  technologies: ["Zig", "C++", "Systems Programming"],
+                  github: "https://github.com/yourusername/project-three",
+                  live: "https://project-three.com",
+                  image: "/placeholder.svg?height=200&width=400",
+                },
+                {
+                  title: "Project Four",
+                  description: "A showcase of your backend expertise with high-performance systems.",
+                  technologies: ["Node.js", "MongoDB", "Docker"],
+                  github: "https://github.com/yourusername/project-four",
+                  live: "https://project-four.com",
+                  image: "/placeholder.svg?height=200&width=400",
+                },
+              ].map((project, index) => (
+                <div
+                  key={index}
+                  className="group rounded-lg border border-zinc-800 bg-zinc-900/50 p-4 transition-colors hover:bg-zinc-900"
+                >
+                  <div className="aspect-video relative mb-4 overflow-hidden rounded-lg bg-zinc-800">
+                    <Image
+                      src={project.image || "/placeholder.svg"}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform group-hover:scale-105"
+                    />
+                  </div>
+                  <h3 className="text-lg font-semibold text-zinc-200">{project.title}</h3>
+                  <p className="mt-2 text-sm text-zinc-400">{project.description}</p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {project.technologies.map((tech, techIndex) => (
+                      <Badge
+                        key={techIndex}
+                        variant="outline"
+                        className="bg-zinc-800/50 text-zinc-400 border-zinc-700 hover:bg-zinc-700"
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                  <div className="mt-4 flex items-center gap-4">
+                    <Link
+                      href={project.github}
+                      className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors"
+                    >
+                      <Github className="h-4 w-4" />
+                      <span>Source</span>
+                    </Link>
+                    <Link
+                      href={project.live}
+                      className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      <span>Live</span>
+                    </Link>
                   </div>
                 </div>
               ))}
