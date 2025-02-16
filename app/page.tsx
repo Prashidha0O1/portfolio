@@ -5,10 +5,10 @@ import { Badge } from "@/components/ui/badge"
 
 export default function Page() {
   const skills = {
-    languages: ["JavaScript", "TypeScript", "Python", "C++", "C#", "Rust", "Zig"],
-    frameworks: ["React.js", "Next.js", "Tauri", "React Native", "Express.js", "Flask", "Django"],
-    backend: ["Node.js", ".NET", "REST APIs", "Microservices"],
-    databases: ["PostgreSQL", "MongoDB", "Elasticsearch", "SQL"],
+    languages: ["JavaScript", "TypeScript", "Python", "Rust"],
+    frameworks: ["React.js", "Next.js", "Tauri", "React Native", "Express.js"],
+    backend: ["Node.js", "REST APIs", "Rocket", "Shuttle"],
+    databases: ["PostgreSQL", "MongoDB", "Redis", "Oracle-SQL"],
   }
 
   const experiences = [
