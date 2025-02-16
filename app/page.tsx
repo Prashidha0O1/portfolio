@@ -13,21 +13,13 @@ export default function Page() {
 
   const experiences = [
     {
-      title: "Senior Software Engineer",
-      company: "Tech Company",
-      period: "2022 - Present",
-      description:
-        "Leading development of high-performance systems using Rust and TypeScript. Implementing WebAssembly solutions for improved performance.",
-      technologies: ["Rust", "TypeScript", "WebAssembly"],
-    },
-    {
       title: "Software Engineer",
-      company: "Innovation Labs",
-      period: "2020 - 2022",
+      company: "Sillicon Tech Nepal",
+      period: "May 2023 - November 2023",
       description:
-        "Developed scalable backend services and modern web applications. Contributed to open-source projects.",
-      technologies: ["TypeScript", "Node.js", "React"],
-    },
+        "Leading development of high-performance mobile and web application systems using React-Native, TypeScript and NodeJs.",
+      technologies: ["React-native", "TypeScript", "NodeJs"],
+    }
   ]
 
   return (
