@@ -5,8 +5,8 @@ import { Badge } from "@/components/ui/badge"
 
 export default function Page() {
   const skills = {
-    languages: ["JavaScript", "TypeScript", "Python", "Rust"],
-    frameworks: ["React.js", "Next.js", "Tauri", "React Native", "Express.js"],
+    languages: ["JavaScript", "TypeScript", "Python", "Rust", "Go"],
+    frameworks: ["React.js", "Next.js", "Tauri", "React Native", "Express.js", "Gin"],
     backend: ["Node.js", "REST APIs", "Rocket", "Shuttle"],
     databases: ["PostgreSQL", "MongoDB", "Redis", "Oracle-SQL"],
   }
@@ -41,26 +41,26 @@ export default function Page() {
               <h1 className="text-3xl font-bold">Prashidha Rawal</h1>
               <p className="text-lg text-zinc-400">Full Stack Developer</p>
             </div>
-            <p className="text-sm text-zinc-400">Building Real Products For Real Clients, Not Just More Projects</p>
+            <p className="text-sm text-zinc-400">An ode to simplicity and war against bloated ad-ridden websites.</p>
           </div>
 
           <div className="flex gap-3">
             <Link
-              href="#"
+              href="https://github.com/Prashidha0O1"
               className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors"
             >
               <Github className="w-5 h-5" />
               <span className="sr-only">GitHub</span>
             </Link>
             <Link
-              href="#"
+              href="whoisprashidha@gmail.com"
               className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors"
             >
               <Mail className="w-5 h-5" />
               <span className="sr-only">Email</span>
             </Link>
             <Link
-              href="#"
+              href="https://www.linkedin.com/in/prashidha-rawal-032697212/"
               className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors"
             >
               <Linkedin className="w-5 h-5" />
